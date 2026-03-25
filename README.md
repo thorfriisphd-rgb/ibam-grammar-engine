@@ -1,5 +1,4 @@
 # ibam-grammar-engine
-# IBAM Grammar Engine
 
 **Structure-based interaction grammar analysis of the C12orf29 (IBAM) protein across 25 taxa**
 
