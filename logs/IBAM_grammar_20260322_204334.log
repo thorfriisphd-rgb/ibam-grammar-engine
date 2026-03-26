@@ -1,0 +1,31 @@
+[20:43:34] [INFO] ================================================
+[20:43:34] [INFO] IBAM Grammar Engine
+[20:43:34] [INFO] Run ID:     20260322_204334
+[20:43:34] [INFO] Label:      IBAM_grammar
+[20:43:34] [INFO] Data root:  /home/snerx/Proc-decode_Weblogo_Data_Folder
+[20:43:34] [INFO] Samples:    /home/snerx/Proc-decode_Weblogo_Data_Folder/Taxon_MDS_data/samples.tsv
+[20:43:34] [INFO] Gates:      50/85,60/90,70/90
+[20:43:34] [INFO] Barcode:    false
+[20:43:34] [INFO] Work dir:   /home/snerx/ibam_pipeline/results/IBAM_grammar_20260322_204334
+[20:43:34] [INFO] *** DRY RUN ***
+[20:43:34] [INFO] ================================================
+[20:43:34] [OK] python3 → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/python3
+[20:43:34] [OK] mafft → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/mafft
+[20:43:34] [OK] weblogo → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/weblogo
+[20:43:34] [OK] gmx → /home/snerx/gromacs-2025.2/bin/gmx
+[20:43:38] [INFO] Versions: /home/snerx/ibam_pipeline/manifest/versions_IBAM_grammar_20260322_204334.txt
+[20:43:38] [INFO] Taxa: 19
+[20:43:38] [INFO] ──────────────────────────────────────────
+[20:43:38] [INFO] STEP 1: PDWLS (PRCO → projection → WebLogo)
+[20:43:38] [INFO] ──────────────────────────────────────────
+[20:43:38] [DRY] cd /home/snerx/ibam_pipeline/results/IBAM_grammar_20260322_204334 && bash /home/snerx/ibam_pipeline/scripts/PDWLS.sh --gates 50/85,60/90,70/90 --data-root /home/snerx/Proc-decode_Weblogo_Data_Folder
+[20:43:38] [INFO] ──────────────────────────────────────────
+[20:43:38] [INFO] STEP 3: Checksums and manifest
+[20:43:38] [INFO] ──────────────────────────────────────────
+[20:43:38] [INFO] ================================================
+[20:43:38] [INFO] Grammar Engine complete.
+[20:43:38] [INFO]   Results:   /home/snerx/ibam_pipeline/results/IBAM_grammar_20260322_204334
+[20:43:38] [INFO]   Log:       /home/snerx/ibam_pipeline/logs/IBAM_grammar_20260322_204334.log
+[20:43:38] [INFO]   Manifest:  /home/snerx/ibam_pipeline/manifest/manifest_IBAM_grammar_20260322_204334.json
+[20:43:38] [INFO]   Checksums: /home/snerx/ibam_pipeline/manifest/checksums_IBAM_grammar_20260322_204334.sha256
+[20:43:38] [INFO] ================================================

@@ -1,0 +1,1 @@
+/home/snerx/ibam_pipeline/results/GH_preflight_20260326_203754/projection/MG_projected_trimmed_n25_core60_chem90.fa

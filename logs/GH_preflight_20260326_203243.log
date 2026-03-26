@@ -1,0 +1,56 @@
+[20:32:43] [INFO] ================================================
+[20:32:43] [INFO] IBAM Grammar Engine
+[20:32:43] [INFO] Run ID:     20260326_203243
+[20:32:43] [INFO] Label:      GH_preflight
+[20:32:43] [INFO] Data root:  /home/snerx/Proc-decode_Weblogo_Data_Folder
+[20:32:43] [INFO] Samples:    /home/snerx/Proc-decode_Weblogo_Data_Folder/Taxon_MDS_data/samples.tsv
+[20:32:43] [INFO] Gates:      60/90
+[20:32:43] [INFO] Barcode:    true
+[20:32:43] [INFO] Work dir:   /home/snerx/ibam_pipeline/results/GH_preflight_20260326_203243
+[20:32:43] [INFO] ================================================
+[20:32:43] [OK] python3 → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/python3
+[20:32:43] [OK] mafft → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/mafft
+[20:32:43] [OK] weblogo → /home/snerx/miniconda3/envs/ccmhcg-md311/bin/weblogo
+[20:32:43] [OK] gmx → /home/snerx/gromacs-2025.2/bin/gmx
+[20:32:46] [INFO] Versions: /home/snerx/ibam_pipeline/manifest/versions_GH_preflight_20260326_203243.txt
+[20:32:46] [INFO] Taxa: 25
+[20:32:46] [INFO] ──────────────────────────────────────────
+[20:32:46] [INFO] STEP 1: PDWLS (PRCO → projection → WebLogo)
+[20:32:46] [INFO] ──────────────────────────────────────────
+==========================================
+PDWLS v3 Run
+WD: /home/snerx/ibam_pipeline/results/GH_preflight_20260326_203243
+DATA_ROOT: /home/snerx/Proc-decode_Weblogo_Data_Folder
+GATES: 60/90
+Watchlist thr: OCC_THR=0.05 P1_THR=NA P2_THR=NA
+GMX: MAKE_PROTEIN_ONLY=1 MAKE_PROT_XTC=0
+==========================================
+Taxa detected (25):
+  - Branchiostoma_floridae
+  - Ciona_intestinalis
+  - Clytia_hemispherica
+  - Eisenia_fetida
+  - Euglena_longa
+  - Euperipatoides_rowelli
+  - Eutreptiella_gymnastica
+  - Hahella_chejuensis
+  - Haliotis_asinina
+  - Henia_illyrica
+  - Lamellibrachia_satsuma
+  - Lampetra_planeri
+  - Lingula_anatina
+  - Lithobius_forficatus
+  - Magallana_angulata
+  - Mus_musculus
+  - Myxine_glutinosa
+  - Naegleria_gruberi
+  - Octopus_vulgaris
+  - Ovis_aries
+  - Phoronis_australis
+  - Podocoryna_carnea
+  - Saccoglossus_kowalevskii
+  - Salpa_thompsoni
+  - Willaertia_magna
+------------------------------------------
+[INFO] PRCO decode: Branchiostoma_floridae
+[ERROR] Myh selection returned 0 atoms: (protein and resid 337:412) and not name H*

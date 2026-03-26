@@ -1,0 +1,19 @@
+BARWLS run manifest
+timestamp: 20260325_210449
+label: barcode_C12_25taxon
+tools_dir: /home/snerx/ccmhcg_tools/Weblogo_Barcode_Analyzer
+c12_root: /home/snerx/ibam_pipeline/results/C12_25taxon_20260325_204818
+myht_root: /home/snerx/ibam_pipeline/results/C12_25taxon_20260325_204818
+python: python3
+topN: 10
+
+tool_files_md5:
+316a0175ad83eb20804e8a751125bb9a  chemical_barcode_analyzer_v2.py
+3088283fbe8ee0018d6e886fa5286f26  complementary_pattern_analyzer_v2.py
+3e894962a50a74cdd5d94d5dd9971766  plot_barcode_stacked.py
+f2e581b95725aa50fcdd3dd3d98d8bb7  run_robustness_analysis_v2.sh
+identity_check_enabled: 0
+identity_check_c12_gate: 
+identity_check_myht_gate: 
+identity_check_null: 200
+identity_check_seed: 1

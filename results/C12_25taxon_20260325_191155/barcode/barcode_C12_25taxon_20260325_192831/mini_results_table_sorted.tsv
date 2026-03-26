@@ -1,0 +1,4 @@
+gate	width	mean_occupancy	mean_anchor_dominance	n99
+core50_chem85	28	0.9686	1.000	10
+core60_chem90	27	0.9674	1.000	10
+core70_chem90	17	0.9765	0.996	9

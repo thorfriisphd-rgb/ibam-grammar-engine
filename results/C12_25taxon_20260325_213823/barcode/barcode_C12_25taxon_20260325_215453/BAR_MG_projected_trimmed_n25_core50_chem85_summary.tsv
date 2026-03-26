@@ -1,0 +1,2 @@
+run_id	gate	n_taxa	width	mean_occupancy	barcode	anchors	barcode_similarity_to_ref
+MG_projected_trimmed_n25_core50_chem85	core50_chem85	25	28	0.9686	BHPHBBPHHBAPPBABBPHHPBABBBBH	1B:1.00,10B:1.00,11A:1.00,12P:1.00,13P:1.00,14B:1.00,16B:1.00,17B:1.00,19H:1.00,20H:1.00	1.0000
