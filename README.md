@@ -1,5 +1,8 @@
 # IBAM Grammar Engine
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19241765.svg)](https://doi.org/10.5281/zenodo.19241765)
+
+
 **Structure-based interaction grammar analysis of C12orf29 (IBAM) across 25 taxa**
 
 Reproducibility pipeline for the manuscript: *C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar spanning ~1 billion years of evolution.*
