@@ -2,6 +2,10 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19241765.svg)](https://doi.org/10.5281/zenodo.19241765)
 
+![GitHub last commit](https://img.shields.io/github/last-commit/thorfriisphd-rgb/ibam-grammar-engine)
+![GitHub repo size](https://img.shields.io/github/repo-size/thorfriisphd-rgb/ibam-grammar-engine)
+
+
 
 **Structure-based interaction grammar analysis of C12orf29 (IBAM) across 25 taxa**
 
