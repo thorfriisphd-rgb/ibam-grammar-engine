@@ -1,3 +1,0 @@
-usage: plot_barcode_stacked.py [-h] --infile INFILE --out OUT [--title TITLE]
-                               [--no-bands]
-plot_barcode_stacked.py: error: the following arguments are required: --infile, --out
