@@ -50,4 +50,4 @@ The script expects GROMACS segid naming: `seg_0_Protein_chain_A` (IBAM) and `seg
 
 ## Example output
 
-![Stability Quad — Willaertia magna](Willaertia_magna_md_StabilityQuad.png)
+![Stability Quad — Ciona intestinalis](Ciona_intestinalis_md_StabilityQuad.png)
