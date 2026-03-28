@@ -47,3 +47,7 @@ Handles 10 ns, 50 ns, and 100 ns trajectories without difficulty on modest hardw
 ## Note on chain selection
 
 The script expects GROMACS segid naming: `seg_0_Protein_chain_A` (IBAM) and `seg_1_Protein_chain_B` (MyT). If your topology uses different segment identifiers, adjust `sel_c12` and `sel_myt` near line 214.
+
+## Example output
+
+![Stability Quad — Willaertia magna](Willaertia_magna_md_StabilityQuad.png)
