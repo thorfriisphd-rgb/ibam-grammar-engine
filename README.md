@@ -282,7 +282,7 @@ All molecular dynamics simulations use standardised parameters:
 ---
 
 ---
-Troubleshooting
+## Troubleshooting
 WebLogo fails with OSError: ... requires the program 'pdf2svg'
 Install the system package: sudo apt install pdf2svg (Debian/Ubuntu) or brew install pdf2svg (macOS). The Python weblogo library depends on this external tool for SVG output but does not install it automatically.
 samples.tsv contains wrong paths / WORKDIR not found errors
