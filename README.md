@@ -283,10 +283,12 @@ All molecular dynamics simulations use standardised parameters:
 
 ---
 ## Troubleshooting
-WebLogo fails with OSError: ... requires the program 'pdf2svg'
-Install the system package: sudo apt install pdf2svg (Debian/Ubuntu) or brew install pdf2svg (macOS). The Python weblogo library depends on this external tool for SVG output but does not install it automatically.
-samples.tsv contains wrong paths / WORKDIR not found errors
-The shipped samples.tsv contains absolute paths from the development machine. Edit the WORKDIR column so each path points to the corresponding taxon directory inside your local copy of the Zenodo data. The file lives at the root of the Zenodo deposit, not inside Taxon_MDS_data/.
+**WebLogo fails with `OSError: ... requires the program 'pdf2svg'`**
+Install the system package: `sudo apt install pdf2svg` (Debian/Ubuntu) or `brew install pdf2svg` (macOS). The Python `weblogo` library depends on this external tool for SVG output but does not install it automatically.
+ 
+**`samples.tsv` contains wrong paths / `WORKDIR not found` errors**
+The shipped `samples.tsv` contains absolute paths from the development machine. Edit the `WORKDIR` column so each path points to the corresponding taxon directory inside your local copy of the Zenodo data. The file lives at the root of the Zenodo deposit, not inside `Taxon_MDS_data/`.
+ 
 ---
 
 ## Reproducibility
