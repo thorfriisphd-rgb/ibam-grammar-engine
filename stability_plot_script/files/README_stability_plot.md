@@ -17,7 +17,7 @@ One-stop post-MD stability analysis for IBAM–MyT complexes. Takes GROMACS topo
 ## Usage
 
 ```bash
-python stability_plot_script.py md.tpr md.xtc --species "Homo sapiens"
+python stability_plot_script.py md.tpr md.xtc --species "Ciona intestinalis"
 ```
 
 The script will prompt for a species name interactively if `--species` is not provided. The species name appears in the Stability Quad title.
