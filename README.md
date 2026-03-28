@@ -101,6 +101,7 @@ Both gates must be passed simultaneously. The pipeline evaluates multiple gating
 - **Python** ≥ 3.8 with: `numpy`, `pandas`, `MDAnalysis`
 - **MAFFT** (sequence alignment)
 - **WebLogo** 3.7+ (sequence logo generation)
+- pdf2svg (required by WebLogo for SVG output; sudo apt install pdf2svg on Debian/Ubuntu)
 - **matplotlib** (barcode rendering)
 - **AF3 predicted structures** for each taxon (see Data Availability)
 
@@ -127,7 +128,7 @@ Extract and point `--data-root` at the extracted directory.
 # Full run: three gate thresholds + barcode
 ./run_pipeline.sh \
   --data-root /path/to/data \
-  --samples /path/to/data/Taxon_MDS_data/samples.tsv \
+  --samples /path/to/data/samples.tsv \
   --gates "50/85,60/90,70/90" \
   --label C12_25taxon \
   --barcode
@@ -135,14 +136,14 @@ Extract and point `--data-root` at the extracted directory.
 # Single gate, no barcode
 ./run_pipeline.sh \
   --data-root /path/to/data \
-  --samples /path/to/data/Taxon_MDS_data/samples.tsv \
+  --samples /path/to/data/samples.tsv \
   --gates "60/90" \
   --label C12_60-90_only
 
 # Dry run (validate without executing)
 ./run_pipeline.sh \
   --data-root /path/to/data \
-  --samples /path/to/data/Taxon_MDS_data/samples.tsv \
+  --samples /path/to/data/samples.tsv \
   --dry-run
 ```
 
@@ -260,7 +261,7 @@ All molecular dynamics simulations use standardised parameters:
 |-----------|-------|-----------|
 | Force field | CHARMM36-jul2022 | |
 | Water model | TIP3P | |
-| Electrostatics | Cutoff (1.2 nm) | Beck et al. 2005; Piana et al. 2012 |
+| Electrostatics | Cutoff (1.0 nm) | Beck et al. 2005; Piana et al. 2012 |
 | Production MD | 10 ns (standard); 50/100 ns in reserve | |
 | Temperature | 310 K | |
 | Contact cutoff | 4.5 Å | |
@@ -278,6 +279,14 @@ All molecular dynamics simulations use standardised parameters:
 | `P1_THR` | (none) | Optional partner 1 occupancy threshold |
 | `P2_THR` | (none) | Optional partner 2 occupancy threshold |
 
+---
+
+---
+Troubleshooting
+WebLogo fails with OSError: ... requires the program 'pdf2svg'
+Install the system package: sudo apt install pdf2svg (Debian/Ubuntu) or brew install pdf2svg (macOS). The Python weblogo library depends on this external tool for SVG output but does not install it automatically.
+samples.tsv contains wrong paths / WORKDIR not found errors
+The shipped samples.tsv contains absolute paths from the development machine. Edit the WORKDIR column so each path points to the corresponding taxon directory inside your local copy of the Zenodo data. The file lives at the root of the Zenodo deposit, not inside Taxon_MDS_data/.
 ---
 
 ## Reproducibility
