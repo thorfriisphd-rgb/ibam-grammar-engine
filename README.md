@@ -59,7 +59,7 @@ AF3 predicted structures (per taxon × MyhT pair)
 ┌─────────────────────────────────────────────┐
 │  STEP 1: PDWLS                              │
 │  ├── PRCO decode (contact extraction)       │
-│  │   └── 4.5 Å cutoff, ≥30% occupancy      │
+│  │   └── 4.5 Å cutoff, ≥30% occupancy       │
 │  ├── MAFFT alignment                        │
 │  ├── Evolutionary projection                │
 │  │   └── Watchlist mapping → projected FASTA│
