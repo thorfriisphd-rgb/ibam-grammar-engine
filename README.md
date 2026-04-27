@@ -348,6 +348,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 ## Author
 
 Thor Einar Friis
+
 ORCID: https://orcid.org/0000-0002-4132-4912
 
 Independent researcher, Bodø, Norway.
