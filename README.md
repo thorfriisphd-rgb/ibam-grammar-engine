@@ -364,4 +364,5 @@ MIT License. See [LICENSE](LICENSE) for details.
 Thor Friis — [@thorfriisphd-rgb](https://github.com/thorfriisphd-rgb)
 
 Independent researcher, Bodø, Norway.
+
 PhD in Molecular Biology, Queensland University of Technology (QUT).
