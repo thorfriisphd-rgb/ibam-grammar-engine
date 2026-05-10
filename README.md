@@ -361,10 +361,13 @@ The scripts in `scripts/` are unmodified working copies of the analysis tools de
 MIT License. See [LICENSE](LICENSE) for details.
 
 ---
-## Contact
 
-Thor Friis — [@thorfriisphd-rgb](https://github.com/thorfriisphd-rgb)
+## Author
+
+Thor Einar Friis
+
+ORCID: https://orcid.org/0000-0002-4132-4912
 
 Independent researcher, Bodø, Norway.
-
 PhD in Molecular Biology, Queensland University of Technology (QUT).
+
