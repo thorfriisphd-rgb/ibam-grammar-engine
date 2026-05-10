@@ -318,14 +318,28 @@ To reproduce the complete analysis:
 
 The pipeline was benchmarked using canonical coiled-coil control systems in addition to the IBAM/C12 dataset.
 
-- **Control structure**: GCN4 leucine zipper (PDB: 4DMD)
-- Used as a positive-control coiled-coil reference for validating:
-  - heptad decoding behaviour
-  - register assignment logic
-  - contact enrichment behaviour
-  - projection consistency
+### GCN4 control system
 
-This control provides an experimentally validated coiled-coil benchmark against which the IBAM–MyhT interaction framework can be compared.
+- **Control structure**: GCN4 leucine zipper (PDB: 4DMD)
+
+The GCN4 system was used as a canonical experimentally validated coiled-coil benchmark for evaluating:
+
+- heptad decoding behaviour
+- register assignment logic
+- contact enrichment behaviour
+- projection consistency
+- interface persistence metrics
+- electrostatics-model sensitivity
+
+Control simulations were performed under:
+
+- Cutoff electrostatics
+- PME electrostatics
+- Reaction Field (RF) electrostatics
+
+These controls demonstrated that the Stability Quad framework responds sensitively to physically meaningful changes in electrostatics treatment. In particular, cutoff electrostatics preserved the canonical leucine-zipper interaction substantially more effectively than PME or RF conditions.
+
+The GCN4 controls are provided as methodological validation resources and are not part of the IBAM evolutionary dataset.
 
 ---
 ## Data Availability
