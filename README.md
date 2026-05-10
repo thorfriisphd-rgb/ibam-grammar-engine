@@ -1,13 +1,11 @@
 # IBAM Grammar Engine
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19241765.svg)](https://doi.org/10.5281/zenodo.19241765)
+[![DOI](https://zenodo.org/badge/DOI/TO_BE_ASSIGNED.svg)](https://doi.org/TO_BE_ASSIGNED)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/thorfriisphd-rgb/ibam-grammar-engine)
 ![GitHub repo size](https://img.shields.io/github/repo-size/thorfriisphd-rgb/ibam-grammar-engine)
 
-
-
-**Structure-based interaction grammar analysis of C12orf29 (IBAM) across 25 taxa**
+**Structure-based interaction grammar analysis of C12orf29 (IBAM) across 26 taxa**
 
 Reproducibility pipeline for the manuscript: *C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar spanning ~1 billion years of evolution.*
 
@@ -26,16 +24,10 @@ The pipeline integrates three analytical stages:
 The output is a projected FASTA alignment in which each column represents not a linear sequence position but a structurally recurrent contact site on the binding interface. Conservation signals extracted from this alignment reflect constraint on the three-dimensional interaction surface rather than on primary structure.
 
 ---
-## Conceptual framework
-
-The IBAM Grammar Engine identifies conserved interaction chemistry at the IBAM–myosin tail interface using a structure-guided evolutionary projection. Instead of relying on conventional multiple sequence alignment alone, the pipeline first decodes persistent IBAM–MyhT contacts from molecular-dynamics trajectories and then projects these interface residues into a shared coordinate system representing positions along the IBAM binding groove. Orthologous sequences from 25 taxa are subsequently mapped onto these interface coordinates, allowing conservation to be evaluated at the level of interaction chemistry rather than primary sequence identity. This approach reveals a conserved pattern of basic, acidic, polar, hydrophobic, and aromatic residues that together form an evolutionarily preserved actomyosin interaction grammar spanning ~1 billion years of divergence.
-
-
----
 
 ## Taxa
 
-The pipeline processes 25 taxa spanning ~1 billion years of eukaryotic divergence, plus a bacterial outgroup:
+The pipeline processes 26 taxa spanning ~1 billion years of eukaryotic divergence, plus a bacterial outgroup:
 
 | Clade | Representative taxa |
 |-------|-------------------|
@@ -51,7 +43,7 @@ The pipeline processes 25 taxa spanning ~1 billion years of eukaryotic divergenc
 | Onychophora | *Euperipatoides rowelli* |
 | Chordata — Tunicata | *Ciona intestinalis*, *Salpa thompsoni* |
 | Chordata — Cephalochordata | *Branchiostoma floridae* |
-| Chordata — Vertebrata | *Lampetra planeri*, *Myxine glutinosa*, *Mus musculus*, *Ovis aries* |
+| Chordata — Vertebrata | *Lampetra planeri*, *Myxine glutinosa*, *Mus musculus*, *Ovis aries*, *Homo sapiens*|
 | Hemichordata | *Saccoglossus kowalevskii* |
 
 ---
@@ -92,7 +84,7 @@ AF3 predicted structures (per taxon × MyhT pair)
 
 The raw projected alignment contains columns with varying levels of phylogenetic support and chemical coherence. To extract the conserved interaction core, a dual-gate filtering scheme is applied:
 
-- **Occupancy gate (core threshold)** — requires a residue to be present in at least *x*% of 25 taxa. Ensures phylogenetic breadth.
+- **Occupancy gate (core threshold)** — requires a residue to be present in at least *x*% of 26 taxa. Ensures phylogenetic breadth.
 - **Chemical dominance gate (chem threshold)** — requires a single physicochemical class (H, P, B, or A) to account for at least *y*% of residues in the column. Ensures functional coherence.
 
 Both gates must be passed simultaneously. The pipeline evaluates multiple gating regimes by default (50/85, 60/90, 70/90) to demonstrate threshold robustness. The core invariant positions are stable across all tested thresholds; progressively stricter gating contracts the cassette by trimming peripheral positions while preserving the functional core.
@@ -124,7 +116,7 @@ No additional installation required. All pipeline scripts are self-contained wit
 
 Download the MD trajectory dataset from Zenodo:
 
-https://doi.org/10.5281/zenodo.19241765
+[![DOI](https://zenodo.org/badge/DOI/TO_BE_ASSIGNED.svg)](https://doi.org/TO_BE_ASSIGNED)
 
 Extract and point `--data-root` at the extracted directory.
 
@@ -133,10 +125,10 @@ Extract and point `--data-root` at the extracted directory.
 ```bash
 # Full run: three gate thresholds + barcode
 ./run_pipeline.sh \
-  --data-root /path/to/data \
-  --samples /path/to/data/samples.tsv \
+  --data-root /path/to/zenodo_deposit \
+  --samples /path/to/zenodo_deposit/samples.tsv \
   --gates "50/85,60/90,70/90" \
-  --label C12_25taxon \
+  --label C12_26taxon \
   --barcode
 
 # Single gate, no barcode
@@ -291,12 +283,18 @@ All molecular dynamics simulations use standardised parameters:
 ## Troubleshooting
 **WebLogo fails with `OSError: ... requires the program 'pdf2svg'`**
 Install the system package: `sudo apt install pdf2svg` (Debian/Ubuntu) or `brew install pdf2svg` (macOS). The Python `weblogo` library depends on this external tool for SVG output but does not install it automatically.
- 
-**`samples.tsv` contains wrong paths / `WORKDIR not found` errors**
-The shipped `samples.tsv` contains absolute paths from the development machine. Edit the `WORKDIR` column so each path points to the corresponding taxon directory inside your local copy of the Zenodo data. The file lives at the root of the Zenodo deposit, not inside `Taxon_MDS_data/`.
- 
----
 
+**`WORKDIR not found` errors**
+
+The canonical `samples.tsv` now uses relative paths and is portable across systems.
+
+Run the pipeline from the repository root and provide the Zenodo root directory via:
+
+```bash
+--data-root /path/to/zenodo_deposit
+```
+
+---
 ## Reproducibility
 
 This pipeline was designed for full end-to-end reproducibility:
@@ -310,21 +308,33 @@ This pipeline was designed for full end-to-end reproducibility:
 To reproduce the complete analysis:
 
 1. Clone this repository
-2. Download MD trajectories from Zenodo: https://doi.org/10.5281/zenodo.19241765
+2. Download MD trajectories from Zenodo: [![DOI](https://zenodo.org/badge/DOI/TO_BE_ASSIGNED.svg)](https://doi.org/TO_BE_ASSIGNED)
 3. Extract and set `--data-root` to the extracted directory
-4. Run: `./run_pipeline.sh --data-root /path/to/data --samples /path/to/data/Taxon_MDS_data/samples.tsv --gates "50/85,60/90,70/90" --label C12_25taxon --barcode`
+4. Run: `./run_pipeline.sh --data-root /path/to/data --samples /path/to/data/Taxon_MDS_data/samples.tsv --gates "50/85,60/90,70/90" --label C12_26taxon --barcode`
 5. Compare output checksums against the reference manifest
 
 ---
+## Validation and Controls
 
+The pipeline was benchmarked using canonical coiled-coil control systems in addition to the IBAM/C12 dataset.
+
+- **Control structure**: GCN4 leucine zipper (PDB: 4DMD)
+- Used as a positive-control coiled-coil reference for validating:
+  - heptad decoding behaviour
+  - register assignment logic
+  - contact enrichment behaviour
+  - projection consistency
+
+This control provides an experimentally validated coiled-coil benchmark against which the IBAM–MyhT interaction framework can be compared.
+
+---
 ## Data Availability
 
 - **Code**: This repository (MIT license)
-- **Data**: AF3 predicted structures and GROMACS MD trajectories for all 25 taxa — https://doi.org/10.5281/zenodo.19241765
+- - **Data**: AF3 predicted structures and GROMACS MD trajectories for the 26-taxon IBAM dataset plus canonical GCN4 control simulations — [![DOI](https://zenodo.org/badge/DOI/TO_BE_ASSIGNED.svg)](https://doi.org/TO_BE_ASSIGNED)
 - **Control structure**: GCN4 leucine zipper (PDB: 4DMD) used for coiled-coil validation
 
 ---
-
 ## Citation
 
 If you use this pipeline, please cite:
@@ -332,24 +342,19 @@ If you use this pipeline, please cite:
 > Friis, T. (2026). C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar. *bioRxiv* [preprint]. DOI: [to be assigned]
 
 ---
-
 ## Design Principle
 
 The scripts in `scripts/` are unmodified working copies of the analysis tools developed and validated during the IBAM project. The orchestrator wraps them without altering their internal logic — it handles directory setup, parameter passing, logging, and provenance tracking.
 
 ---
-
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
 
 ---
+## Contact
 
-## Author
-
-Thor Einar Friis
-
-ORCID: https://orcid.org/0000-0002-4132-4912
+Thor Friis — [@thorfriisphd-rgb](https://github.com/thorfriisphd-rgb)
 
 Independent researcher, Bodø, Norway.
 PhD in Molecular Biology, Queensland University of Technology (QUT).
