@@ -346,7 +346,7 @@ The GCN4 controls are provided as methodological validation resources and are no
 
 If you use this pipeline, please cite:
 
-> Friis, T. (2026). C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar. *bioRxiv* [preprint]. DOI: [to be assigned]
+> Friis, T. (2026). C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar. Manuscript in preparation.
 
 ---
 ## Design Principle
