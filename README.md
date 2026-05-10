@@ -7,7 +7,9 @@
 
 **Structure-based interaction grammar analysis of C12orf29 (IBAM) across 26 taxa**
 
-Reproducibility pipeline for the manuscript: *C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein with a conserved actomyosin binding grammar spanning ~1 billion years of evolution.*
+Reproducibility framework for the IBAM/C12orf29 study:
+
+*C12orf29 encodes IBAM (In Between Actin and Myosin), a sarcomeric protein exhibiting a conserved actomyosin interaction grammar spanning approximately one billion years of evolution.*
 
 ---
 
