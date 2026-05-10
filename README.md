@@ -1,6 +1,6 @@
 # IBAM Grammar Engine
 
-[![DOI](https://zenodo.org/badge/DOI/TO_BE_ASSIGNED.svg)](https://doi.org/TO_BE_ASSIGNED)
+[![DOI]([(https://doi.org/10.5281/zenodo.20111879).svg)](https://doi.org/10.5281/zenodo.20111879)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/thorfriisphd-rgb/ibam-grammar-engine)
 ![GitHub repo size](https://img.shields.io/github/repo-size/thorfriisphd-rgb/ibam-grammar-engine)
