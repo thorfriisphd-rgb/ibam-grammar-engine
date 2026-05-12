@@ -374,7 +374,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 Thor Einar Friis
 
-ORCID: https://orcid.org/0000-0002-4132-4912
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--4132--4912-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-4132-4912)
 
 Independent researcher, Bodø, Norway.
 PhD in Molecular Biology, Queensland University of Technology (QUT).
