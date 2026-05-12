@@ -127,23 +127,23 @@ Extract and point `--data-root` at the extracted directory.
 ```bash
 # Full run: three gate thresholds + barcode
 ./run_pipeline.sh \
-  --data-root /path/to/zenodo_deposit \
-  --samples /path/to/zenodo_deposit/samples.tsv \
+  --data-root /path/to/ibam_dataset \
+  --samples /path/to/ibam_dataset/samples.tsv \
   --gates "50/85,60/90,70/90" \
   --label C12_26taxon \
   --barcode
 
 # Single gate, no barcode
 ./run_pipeline.sh \
-  --data-root /path/to/data \
-  --samples /path/to/data/samples.tsv \
+  --data-root /path/to/ibam_dataset \
+  --samples /path/to/ibam_dataset/samples.tsv \
   --gates "60/90" \
   --label C12_60-90_only
 
 # Dry run (validate without executing)
 ./run_pipeline.sh \
-  --data-root /path/to/data \
-  --samples /path/to/data/samples.tsv \
+  --data-root /path/to/ibam_datset \
+  --samples /path/to/ibam_dataset/samples.tsv \
   --dry-run
 ```
 
