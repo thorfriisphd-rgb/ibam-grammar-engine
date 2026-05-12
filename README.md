@@ -285,25 +285,24 @@ All molecular dynamics simulations use standardised parameters:
 ## Troubleshooting
 
 ### WebLogo SVG output error
-
 If WebLogo fails with:
 
-```text
 OSError: ... requires the program 'pdf2svg'
-
 install the required system package.
 
 Ubuntu/Debian:
-
+```text
 sudo apt install pdf2svg
-
-macOS:
-
-brew install pdf2svg
-WORKDIR path errors
-
-Some WORKDIR entries in samples.tsv reflect the developer's local folder structure and may need to be edited to match the user's own directory setup.
 ```
+macOS:
+```text
+brew install pdf2svg
+```
+
+### WORKDIR path errors
+
+Some WORKDIR entries in samples.tsv reflect the developer's local folder structure and wil need to be edited to match the user's own directory setup.
+
 
 ---
 ## Reproducibility
