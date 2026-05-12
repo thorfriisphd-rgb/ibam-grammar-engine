@@ -310,7 +310,7 @@ This pipeline was designed for full end-to-end reproducibility:
 To reproduce the complete analysis:
 
 1. Clone this repository
-2. Download MD trajectories from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20142592.svg)](https://doi.org/10.5281/zenodo.20142592)
+2. Download MD trajectories from Zenodo
 3. Extract and set `--data-root` to the extracted directory
 4. Run: `./run_pipeline.sh --data-root /path/to/data --samples /path/to/data/Taxon_MDS_data/samples.tsv --gates "50/85,60/90,70/90" --label C12_26taxon --barcode`
 5. Compare output checksums against the reference manifest
