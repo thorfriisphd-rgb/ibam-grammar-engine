@@ -301,7 +301,7 @@ brew install pdf2svg
 
 ### WORKDIR path errors
 
-Some WORKDIR entries in *samples.tsv* reflect the developer's local folder structure and wil need to be edited to match the user's own directory setup.
+The WORKDIR entries in *samples.tsv* reflect the developer's local folder structure and wil need to be edited to match the user's own directory setup.
 
 
 ---
